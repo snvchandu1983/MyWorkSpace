@@ -1,0 +1,514 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TopLeft.master.cs" Inherits="LAjitDev.TopLeft" %>
+
+<%@ Register Src="~/UserControls/GridViewControl.ascx" TagName="LPGV" TagPrefix="LAjitGVUC" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript" language="javascript">
+    //Set Theme to use in Master.js file
+    g_cdnImagesPath = '<%= Application["ImagesCDNPath"] %>';
+    g_cdnScriptsPath = '<%= Application["ScriptsCDNPath"] %>';
+    g_virtualPath = '<%= Application["VirtualPath"] %>';          
+</script>
+<head runat="server">
+</head>
+<body onload="backButtonOverride();" onkeypress="return noenter(event);" onkeydown="return OnAppKeyDown(event);">
+    <input type="hidden" id="hdnBPGID" name="hdnBPGID" />
+    <form id="frmMaster" runat="server">
+    <asp:ScriptManager ID="topLeftScriptMngr" runat="server" ScriptMode="Release" EnablePartialRendering="true">
+    </asp:ScriptManager>
+    <!-- JQuery core files -->
+    <!-- ParentChild.js is being added dynamically in the code-behind to diferentiate scripts for JqGrid.-->
+    <%--<script type="text/javascript" src="../JavaScript/ParentChild.js"></script>--%>
+    <%-- <script type="text/javascript" src="../JavaScript/ljq.js"></script>--%>
+    <div id="divMenuSearch" style="display: none; z-index: 100001">
+        <input class="menuSearch" id="txtMenuSearch" type="text" /></div>
+    <table id="tblMaster" width="984px" border="0" align="center" cellpadding="0" cellspacing="0">
+        <!-- Logo -->
+        <tr>
+            <td align="left">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                        <td align="left" style="width: 62px;">
+                            <a href="#">
+                                <img alt="LogoMain" runat="server" id="imgMainLogo" width="62" border="0" title="LAjit Logo" /></a>
+                        </td>
+                        <td valign="bottom" align="left" style="width: 500px; padding-bottom: 7px; padding-left: 4px"
+                            class="mainLogoText">
+                            <asp:Label ID="lblLogoText" runat="server" CssClass="mainLogoText"></asp:Label>
+                        </td>
+                        <td align="left" valign="bottom" style="width: 20px;">
+                            <!--&nbsp;-->
+                        </td>
+                        <td align="right" valign="bottom" style="width: 500px;">
+                            <table border="0" align="right" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="right">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <asp:LinkButton ID="lnkBtnReloadPreference" runat="server" CssClass="topboldlinks"
+                                                        Text="Reload Preferences" Visible="true" OnClick="ddlEntity_SelectedIndexChanged"></asp:LinkButton>
+                                                </td>
+                                                <td id="td1" runat="server" visible="true" align="center" style="width: 9px; height: 19px;">
+                                                    |
+                                                </td>
+                                                <td>
+                                                    <asp:LinkButton ID="lnkBtnModRequest" runat="server" CssClass="topboldlinks" Visible="false"></asp:LinkButton>
+                                                </td>
+                                                <td id="tdModReqSeparator" runat="server" visible="false" align="center" style="width: 9px;
+                                                    height: 19px;">
+                                                    |
+                                                </td>
+                                                <td>
+                                                    <a href="javascript:RefreshPage();" oncontextmenu="return false;" class="topboldlinks">
+                                                        Refresh</a>
+                                                </td>
+                                                <td align="center" style="width: 9px; height: 19px;">
+                                                    |
+                                                </td>
+                                                <td style="height: 19px">
+                                                    <asp:LinkButton ID="lnkBtnHelp" runat="server" CssClass="topboldlinks" Text="Help"></asp:LinkButton>
+                                                </td>
+                                                <td align="center" style="width: 9px; height: 19px;">
+                                                    |
+                                                </td>
+                                                <td style="height: 19px">
+                                                    <asp:LinkButton ID="lnkBtnHelpAuth" runat="server" CssClass="topboldlinks" Visible="false"></asp:LinkButton>
+                                                </td>
+                                                <td id="tdSepHelpAuth" runat="server" visible="false" align="center" style="width: 9px;
+                                                    height: 19px;">
+                                                    |
+                                                </td>
+                                                <td style="height: 19px; width: 12px">
+                                                    <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Logout" CssClass="topboldlinks"
+                                                        OnClick="lnlbtnLogout_Click"></asp:LinkButton>
+                                                </td>
+                                                <td>
+                                                    <img alt="" src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" width="5" height="1" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 10px;">
+                                        <img alt="" src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" width="1" height="1" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--Home, Menu Panel -->
+        <%--   <tr>
+                <td style="height: 26px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height: 26px;">
+                        <tr>
+                            <td style="background: url(../App_Themes/<%=Session["MyTheme"]%>/Images/but-bg.gif)repeat-x;
+                                width: 62px">
+                                <img src="../App_Themes/<%=Session["MyTheme"]%>/Images/logo-bottom.gif" alt='LogoBottom'
+                                    title='LogoBottom' width='62' style='border: 0px; height: 26px' /></td>
+                           <td align='left' style='width: 45px; height: 26px; cursor: pointer' valign='bottom'>
+                                <img id="imgHome" src="../App_Themes/<%=Session["MyTheme"]%>/Images/home-but.gif"
+                                    alt='Go Home' title='Go Home' width='45px' height='26px' border='0' onclick='OnHomeImgClick();' /></td>
+                            <td valign="top" align="left"  runat="server" >
+                            <asp:Literal ID="litmenu1" runat="server"></asp:Literal>
+                            </td>
+                            <td align="left" style="background: url(../App_Themes/<%=Session["MyTheme"]%>/Images/but-bg.gif);
+                                repeat-x;">
+                                <img alt="Spacer" src="../App_Themes/<%=Session["MyTheme"]%>/Images/spacer.gif" height="1" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>--%>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                    <tr>
+                        <td align="center">
+                            <asp:Literal ID="litmenu" runat="server"></asp:Literal>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Spacer -->
+        <tr>
+            <td style="height: 10px;">
+            </td>
+        </tr>
+        <!--LeftPanel & ContentPage-->
+        <tr>
+            <td>
+                <!-- newly added div tag start-->
+                <%-- <div id="divContent" class="mainContent">--%>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td>
+                            <!-- left panel start -->
+                            <asp:Panel ID="pnlLeftPanel" runat="server">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr valign="top">
+                                        <td style="width: 147px;">
+                                            <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; vertical-align: top">
+                                                <tr>
+                                                    <td>
+                                                        <table border="0" cellspacing="0" cellpadding="0" style="width: 147px;">
+                                                            <tr>
+                                                                <td style="height: 8px;">
+                                                                    <img alt="left-blue-top" title="left-blue-top" src="<%=Application["ImagesCDNPath"]%>Images/left-blue-top.gif"
+                                                                        width="147" height="8" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="background-color: #4f9db1;">
+                                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="bottom" class="white-left">
+                                                                                <img alt="" src="<%=Application["ImagesCDNPath"]%>Images/web-search.gif" width="132"
+                                                                                    height="13" />
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <select name="select" class="dropfields" style="width: 135px;">
+                                                                                    <option selected="selected">Enter Search</option>
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr id="trChangeRoleTitle" runat="server">
+                                                                            <td align="left" valign="top">
+                                                                                <asp:Label ID="lblChangeRole" runat="server" CssClass="white-leftsmall" Text="Company / Role"></asp:Label>&nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr id="trChangeRoleDDL" runat="server">
+                                                                            <td>
+                                                                                <LCtrl:LAjitDropDownList ID="ddlEntity" runat="server" MapXML="EntityID" Style="width: 135px;"
+                                                                                    AutoPostBack="true" OnSelectedIndexChanged="ddlEntity_SelectedIndexChanged">
+                                                                                </LCtrl:LAjitDropDownList>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr id="trChangeRoleSpace" runat="server">
+                                                                            <td id="Td2" align="center" valign="top" runat="server">
+                                                                                <asp:LinkButton ID="lnkBtnChangeRole" runat="server" CssClass="whitelinks" Text="Set As Default Company"
+                                                                                    Visible="true"></asp:LinkButton>
+                                                                                <br />
+                                                                                <asp:LinkButton ID="lnkBtnRemoveRole" runat="server" CssClass="whitelinks" Text="Remove Default"
+                                                                                    Visible="true"></asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top">
+                                                                                <img alt="Spacer" src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" height="3px" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 7px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Table ID="tableShortcuts" runat="server" Width="147" EnableViewState="true"
+                                                            CellPadding="0" CellSpacing="0">
+                                                        </asp:Table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 7px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table id="tblHistory" style="display: none" width="147px" cellpadding="0" cellspacing="0"
+                                                            class="RPContent">
+                                                            <tr>
+                                                                <td align="center" class="grdVwLPTitle" style="height: 24px;">
+                                                                    My History
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="histNav">
+                                                                    <img alt="Scroll Up" src="<%=Application["ImagesCDNPath"]%>Images/up-arrow.gif" onclick="ScrollHistory('Up');" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div id="divHistory" class="histDiv">
+                                                                        <ul id="ulMyHist" class="ulHistory" style="float: left">
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="histNav">
+                                                                    <img alt="Scroll Down" src="<%=Application["ImagesCDNPath"]%>Images/down-arrow.gif"
+                                                                        onclick="ScrollHistory('Down');" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 7px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table width="147px" cellpadding="0" cellspacing="0" class="RPContent">
+                                                            <tr>
+                                                                <td align="center" class="grdVwLPTitle" style="height: 24px;">
+                                                                    Active Windows
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table id="tblFrameList" cellpadding="0" cellspacing="0" style="width: 147px; overflow-x: hidden">
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top" bgcolor="#FFFFFF" style="height: 7px;">
+                                                        <asp:LinkButton ID="lnkBtnRefreshGrids" runat="server" OnClick="lnkBtnRefreshGrids_onClick"
+                                                            Text="Refresh"></asp:LinkButton>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <asp:UpdatePanel runat="server" ID="updtPnlLPGV" UpdateMode="Conditional">
+                                                            <ContentTemplate>
+                                                                <asp:Timer ID="timerLPUpdater" runat="server" Enabled="false" OnTick="timerLPUpdater_Tick">
+                                                                </asp:Timer>
+                                                                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                    <tr>
+                                                                        <td align="left" valign="top"">
+                                                                            <asp:Panel ID="pnlLPGV1" runat="server" Height="120px">
+                                                                                <table width="147px" cellpadding="0" cellspacing="0" class="RPContent">
+                                                                                    <tr>
+                                                                                        <td id="htcLPGV1" runat="server" align="center" class="grdVwLPTitle" style="height: 24px;">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div style="height: 120px; width: 147px; overflow: hidden">
+                                                                                                <asp:GridView ID="grdVwLeftPanel1" runat="server" AutoGenerateColumns="false" Width="100%"
+                                                                                                    GridLines="None" OnRowDataBound="grdVwLeftPanel_RowDataBound">
+                                                                                                    <HeaderStyle BackColor="#d7e0f1" />
+                                                                                                    <Columns>
+                                                                                                        <asp:TemplateField ItemStyle-Width="2px">
+                                                                                                            <ItemTemplate>
+                                                                                                                <asp:HiddenField ID="hdnRowInfo" runat="server"></asp:HiddenField>
+                                                                                                            </ItemTemplate>
+                                                                                                        </asp:TemplateField>
+                                                                                                    </Columns>
+                                                                                                </asp:GridView>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <asp:LinkButton ID="lnkBtnLPGV1FV" runat="server">Show Full View</asp:LinkButton>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </asp:Panel>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="left" valign="top" style="height: 7px;">
+                                                                            <img alt="Spacer" src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" width="1" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="left" valign="top" style="height: 97px;">
+                                                                            <asp:Panel ID="pnlLPGV2" runat="server">
+                                                                                <table width="147px" cellpadding="0" cellspacing="0" class="RPContent">
+                                                                                    <tr>
+                                                                                        <td id="htcLPGV2" runat="server" align="center" class="grdVwLPTitle" style="height: 24px;">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div style="height: 140px; width: 147px; overflow: hidden">
+                                                                                                <asp:GridView ID="grdVwLeftPanel2" runat="server" Width="100%" AutoGenerateColumns="false"
+                                                                                                    GridLines="None" OnRowDataBound="grdVwLeftPanel_RowDataBound">
+                                                                                                    <HeaderStyle BackColor="#d7e0f1" />
+                                                                                                    <Columns>
+                                                                                                        <asp:TemplateField ItemStyle-Width="2px">
+                                                                                                            <ItemTemplate>
+                                                                                                                <asp:HiddenField ID="hdnRowInfo" runat="server"></asp:HiddenField>
+                                                                                                            </ItemTemplate>
+                                                                                                        </asp:TemplateField>
+                                                                                                    </Columns>
+                                                                                                </asp:GridView>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <asp:LinkButton ID="lnkBtnLPGV2FV" runat="server">Show Full View</asp:LinkButton>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </asp:Panel>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="left" valign="top" style="height: 7px;">
+                                                                            <img alt="Spacer" src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" width="1" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <!-- powered by logo start -->
+                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                <tr valign="top">
+                                                                                    <td align="left">
+                                                                                        <a href="http://lajit.biz/" target="_blank" border="0">
+                                                                                            <img alt="poweredbylajit" src="<%=Application["ImagesCDNPath"]%>Images/powered-by-lajit-logo.png"
+                                                                                                border="0" width="119px" /></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                            <!-- powered by logo end -->
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </ContentTemplate>
+                                                            <Triggers>
+                                                                <asp:AsyncPostBackTrigger ControlID="lnkBtnRefreshGrids" />
+                                                            </Triggers>
+                                                        </asp:UpdatePanel>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                            <!-- left panel end -->
+                        </td>
+                        <td align="center" style="padding: 2px; width: 12px; height: 753px; vertical-align: top;">
+                            <img id="pnlArrow" alt="Slide" accesskey="W" style="cursor: pointer;" src="<%=Application["ImagesCDNPath"]%>Images/close-arrow.gif"
+                                onclick="javascript:LeftClick(this);" />
+                        </td>
+                        <td id="tdContentPage" style="width: 100%">
+                            <asp:ContentPlaceHolder ID="cphPageContents" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+                <%--   </div>--%>
+            </td>
+        </tr>
+    </table>
+    <asp:Panel ID="pnlMasterPopUp" runat="server">
+    </asp:Panel>
+    <asp:Panel ID="pnlExplodedView" runat="server" Width="545px">
+        <asp:Panel ID="pnlExpViewTitle" runat="server" Width="100%">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0" style="height: 24px;
+                border-right-width: 1px; border-right-style: double; border-right-color: #d7e0f1;">
+                <tr style="height: 24px;">
+                    <td style="height: 24px; width: 4px;">
+                        <img alt="curveLeft" src="<%=Application["ImagesCDNPath"]%>Images/curve-left.gif" />
+                    </td>
+                    <td id="tdExpViewText" align="center" class="grdVwtitle" style="height: 24px; border-width: 0px">
+                    </td>
+                    <td style="height: 24px; width: 5px;">
+                        <img alt="curveRight" src="<%=Application["ImagesCDNPath"]%>Images/curve-right.gif" />
+                    </td>
+                    <td id="tdExpViewBG" class="grdVwTitleAuto" style="height: 24px;" width="auto">
+                        <% if (Page.Request.Browser.Browser == "AppleMAC-Safari")
+                           { %>
+                        <img src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" alt="spacer" height="1" />
+                        <%} %>
+                    </td>
+                    <td class="grdVwTitleAuto" style="height: 24px; width: 20px" align="center">
+                        <img id="imgExpView" style="cursor: pointer" alt="expandCollapse" src="<%=Application["ImagesCDNPath"]%>Images/close-but.png"
+                            onclick="javascript:CloseExpView();" />
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+        <asp:Panel ID="pnlExpViewContent" runat="server" Width="100%" HorizontalAlign="Center">
+            <asp:Table ID="tblMainContents" runat="server" BorderWidth="0">
+            </asp:Table>
+            <table id="tblButtons" cellpadding="0" cellspacing="0" border="0" style="height: 0px"
+                width="100%">
+                <tr>
+                    <td align="center" style="cursor: pointer;">
+                        <img id="imgBtnShowHideShrtCuts" src="<%=Application["ImagesCDNPath"]%>Images/show-shortcuts-but.png"
+                            alt="Show/Hide" onclick="ShowHideShrtCuts();" />
+                        <img id="imgBtnUpdateShrtCuts" src="<%=Application["ImagesCDNPath"]%>Images/update-shortcuts-but.png"
+                            style="visibility: hidden;" alt="Update" onclick="UpdateShrtCuts();" />
+                        <img id="imgBtnCloseShrtCuts" src="<%=Application["ImagesCDNPath"]%>Images/cancel-but.png"
+                            alt="Update" onclick="javascript:CloseExpView();" />
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+    </asp:Panel>
+    <div id="divPagePopUp">
+        <asp:Panel ID="pnlPagePopUp" runat="server" Style="display: none" BorderWidth="0"
+            BackColor="white" BorderColor="#000c19" ScrollBars="None">
+            <iframe id="iframePage" name="iframePage" visible="false" height="525" width="932"
+                frameborder="0"></iframe>
+            <!--Also update the height and width in BasePage and jsFiles-->
+            <!-- close button start -->
+            <center>
+                <asp:LinkButton ID="lnkBtnCloseIFrame" runat="server" OnClick="lnkBtnCloseIFrame_Click"
+                    OnClientClick="OnCloseLinkClick();return false;">Close</asp:LinkButton>
+            </center>
+            <img alt="" src="<%=Application["ImagesCDNPath"]%>Images/spacer.gif" />
+            <!-- close button end -->
+        </asp:Panel>
+    </div>
+    <!-- floating box start -->
+    <!--<div id="floating_box" style="height: 14px; width: 70px;">
+            <center>
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="width: 70px">
+                            
+                            <img src="../App_Themes/LAjit/Images/exit.png" alt="" title="Exit to home page" style="cursor: pointer;
+                                vertical-align: top" onclick="javascript:GoToHome();" />
+                        </td>
+                        <td>
+                            <img alt="" id="close_message" style="float: right; cursor: pointer; vertical-align: top"
+                                title="Close this popup" src='../App_Themes/<%=Session["MyTheme"]%>/Images/floating-close.png' />
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>-->
+    <!-- floating box end -->
+    <asp:HiddenField ID="hdnResolution" runat="server" />
+    <asp:HiddenField ID="hdnMasterDummy" runat="server" />
+    <asp:HiddenField ID="hdnMasterDummy1" runat="server" />
+    <asp:HiddenField ID="hdnCurrentAction" runat="server" />
+    <asp:HiddenField ID="hdnFormInfo" runat="server" />
+    <!--Stores the Client state of the Left Panel.-->
+    <asp:HiddenField ID="hdnLPCollapsed" runat="server" />
+    <!--For Exploded View Functionality -->
+    <input type="hidden" id="hdnMenuPanel" name="mnuPnlXML" runat="server" />
+    <input type="hidden" id="hdnThemeName" name="MyTheme" runat="server" />
+    <input type="hidden" id="hdnImagesCDNPath" name="hdnImagesCDNPath" runat="server" />
+    <input type="hidden" id="hdnScriptCDNPath" name="hdnScriptCDNPath" runat="server" />
+    <asp:XmlDataSource ID="xdsMenu" runat="server" EnableCaching="false"></asp:XmlDataSource>
+    <span id="ruler" style="visibility: hidden; white-space: nowrap;"></span>
+    <asp:ValidationSummary ID="valSummmaryEntryForm" ShowSummary="false" runat="server"
+        ShowMessageBox="true" HeaderText="Invalid input for the following fields" DisplayMode="BulletList"
+        Enabled="true" EnableClientScript="true" ValidationGroup="LAJITEntryForm" />
+    </form>
+</body>
+</html>

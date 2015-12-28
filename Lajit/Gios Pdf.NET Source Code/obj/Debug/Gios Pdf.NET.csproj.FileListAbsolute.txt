@@ -1,0 +1,6 @@
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\Gios Pdf.NET Source Code\obj\Debug\ResolveAssemblyReference.cache
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\Gios Pdf.NET Source Code\bin\Debug\Gios Pdf.NET.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\Gios Pdf.NET Source Code\bin\Debug\Gios Pdf.NET.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\Gios Pdf.NET Source Code\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\Gios Pdf.NET Source Code\obj\Debug\Gios Pdf.NET.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\Gios Pdf.NET Source Code\obj\Debug\Gios Pdf.NET.pdb

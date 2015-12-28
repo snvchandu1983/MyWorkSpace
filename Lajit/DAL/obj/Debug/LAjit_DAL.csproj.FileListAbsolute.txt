@@ -1,0 +1,5 @@
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\DAL\bin\Debug\LAjit_DAL.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\DAL\bin\Debug\LAjit_DAL.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\DAL\obj\Debug\LAjit_DAL.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\DAL\obj\Debug\LAjit_DAL.pdb

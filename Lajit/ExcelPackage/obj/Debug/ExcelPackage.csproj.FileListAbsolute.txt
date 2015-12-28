@@ -1,0 +1,5 @@
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\ExcelPackage\bin\Debug\ExcelPackage.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\ExcelPackage\bin\Debug\ExcelPackage.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\ExcelPackage\obj\Debug\ResolveAssemblyReference.cache
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\ExcelPackage\obj\Debug\ExcelPackage.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\ExcelPackage\obj\Debug\ExcelPackage.pdb

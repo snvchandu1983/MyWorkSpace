@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hover Process Menu</title>
+    <script type="text/javascript">
+        var callerID='aProcessMenu';
+        function ShowReport(rType)
+        {
+            var caller=$get(callerID);
+            var callerHRef=caller.getAttribute('href');
+            switch(rType)
+            {
+                case 'Excel':
+                {
+                    var cHrefSplit=callerHRef.split(',')
+                    cHrefSplit[5]='2)';
+                    callerHRef=cHrefSplit.join(',');
+                    break;
+                }
+                case 'Word':
+                {
+                    var cHrefSplit=callerHRef.split(',')
+                    cHrefSplit[5]='3)';
+                    callerHRef=cHrefSplit.join(',');
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+            setTimeout(callerHRef,0);
+        }
+        
+        function ShowEmailInput()
+        {
+            jQuery('#tblEmailRpt').slideToggle(400);
+        }
+        
+        function SendEMail()
+        {
+            var objSender=$get(callerID);
+            var BPGID=objSender.getAttribute('BPGID');
+            var COXML=objSender.getAttribute('XMLStoreId');
+            COXML=$get(COXML).value;
+            var mailIds=objSender.getAttribute('MailIDs');
+            mailIds+=document.getElementById('txtEmailIds').value;
+            var msgStatuss=AjaxMethods.Submit(BPGID,COXML,mailIds,cb_SendEMail);
+        }    
+        
+        function cb_SendEMail(response)
+        {
+            var StatusMessage=response.value; 
+            if(StatusMessage==null)
+            {
+                alert("Email Sent Successfully");
+            }
+            else
+            {
+                alert(StatusMessage);
+            }
+        } 
+    </script>
+
+    <style type="text/css">
+        .padding td
+        {
+            padding-left: 4px;
+            padding-right: 4px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <table border="0" cellpadding="0" cellspacing="0" width="200px">
+        <tr>
+            <td align="center">
+                <table border="0" cellpadding="0" cellspacing="" class="padding">
+                    <tr>
+                        <td>
+                            <img id="imgBtnPDF" title="Print PDF" src='<%=Application["ImagesCDNPath"]%>Images/grid-pdf.png'
+                                onclick="ShowReport('PDF');" />
+                        </td>
+                        <td>
+                            <img id="imgBtnExcel" title="Print Excel" src='<%=Application["ImagesCDNPath"]%>Images/grid-excel.png'
+                                onclick="ShowReport('Excel');" />
+                        </td>
+                        <td>
+                            <img id="imgBtnMSWord" title="Print MSWord" src='<%=Application["ImagesCDNPath"]%>Images/Grid_Word.png'
+                                onclick="ShowReport('Word');" />
+                        </td>
+                        <td>
+                            <img id="imgBtnEmailPDF" title="Email PDF" src='<%=Application["ImagesCDNPath"]%>Images/email_icon2.png'
+                                onclick="javascript:ShowEmailInput();" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table id="tblEmailRpt" style="display: none">
+                    <tr>
+                        <td align="center" colspan="2">
+                            <b>Email Recepients</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" width="200px" colspan="2">
+                            <textarea rows="3" cols="23" id="txtEmailIds" class="LajitTextBox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2" style="height: 24px; width: 205px" valign="middle">
+                            <input type="image" alt="Submit" src='<%=Application["ImagesCDNPath"]%>images/submit-but.png'
+                                onclick="javascript:SendEMail();return false;" validationgroup="LAJITEntryForm" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,1856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E56F6ACE-A19C-4FA6-A8C0-4C8182AE647B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LAjitDev</RootNamespace>
+    <AssemblyName>LAjitDev</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax, Version=5.7.22.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.34548, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="DocX, Version=1.0.0.8, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DundasWebChart, Version=6.2.0.1740, Culture=neutral, PublicKeyToken=90d06b0c62d592d0, processorArchitecture=MSIL" />
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22451, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.6.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73" />
+    <Reference Include="ITextsharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Third Party DLL\ITextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Third Party DLL\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebChart, Version=1.1.1.4, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banking\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Banking\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\BankControl.aspx.cs">
+      <DependentUpon>BankControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Banking\BankControl.aspx.designer.cs">
+      <DependentUpon>BankControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\ControlAcctMap.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ControlAcctMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\ControlAcctMap.aspx.designer.cs">
+      <DependentUpon>ControlAcctMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\PaymentRange.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>PaymentRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\PaymentRange.aspx.designer.cs">
+      <DependentUpon>PaymentRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AjaxMethods.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\AjaxMethodsPartial.cs" />
+    <Compile Include="Classes\AppGlobal.cs" />
+    <Compile Include="Classes\AutoFill.cs" />
+    <Compile Include="Classes\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\BasePagePopUp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\BasicPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\clsBranchUI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsReportsUI.cs" />
+    <Compile Include="Classes\clsReportsUICore.cs" />
+    <Compile Include="Classes\CommonUI.cs" />
+    <Compile Include="Classes\CommonUIPartial.cs" />
+    <Compile Include="Classes\ErrorLogger.cs" />
+    <Compile Include="Classes\ExportChart.cs" />
+    <Compile Include="Classes\GridReports.cs" />
+    <Compile Include="Classes\ITextSharp\ITextPageEvent.cs" />
+    <Compile Include="Classes\ITextSharp\ITextTableEvents.cs" />
+    <Compile Include="Classes\ITextSharp\ITextXMLStore.cs" />
+    <Compile Include="Classes\ITextSharp\Report.cs" />
+    <Compile Include="Classes\JQCommonUI.cs" />
+    <Compile Include="Classes\JQueryUI.cs" />
+    <Compile Include="Classes\PCBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\rptDOC.cs" />
+    <Compile Include="Classes\rptEXCEL.cs" />
+    <Compile Include="Classes\rptHTML.cs" />
+    <Compile Include="Classes\rptPDF.cs" />
+    <Compile Include="Classes\rptPDFPartial.cs" />
+    <Compile Include="Classes\rptTXT.cs" />
+    <Compile Include="Classes\viewStateSvrMgr.cs" />
+    <Compile Include="Common\BulkUpload.aspx.cs">
+      <DependentUpon>BulkUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\BulkUpload.aspx.designer.cs">
+      <DependentUpon>BulkUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GenProcessEngine.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GenProcessEngine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GenProcessEngine.aspx.designer.cs">
+      <DependentUpon>GenProcessEngine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GenView.aspx.cs">
+      <DependentUpon>GenView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\GenView.aspx.designer.cs">
+      <DependentUpon>GenView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\HelpAuthor.aspx.cs">
+      <DependentUpon>HelpAuthor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\HelpAuthor.aspx.designer.cs">
+      <DependentUpon>HelpAuthor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChartView.aspx.cs">
+      <DependentUpon>ChartView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ChartView.aspx.designer.cs">
+      <DependentUpon>ChartView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChartViewer.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ChartViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChartViewer.aspx.designer.cs">
+      <DependentUpon>ChartViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\City.aspx.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\City.aspx.designer.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ContentError.aspx.cs">
+      <DependentUpon>ContentError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ContentError.aspx.designer.cs">
+      <DependentUpon>ContentError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\County.aspx.cs">
+      <DependentUpon>County.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\County.aspx.designer.cs">
+      <DependentUpon>County.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Currency.aspx.cs">
+      <DependentUpon>Currency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Currency.aspx.designer.cs">
+      <DependentUpon>Currency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CurrencyRate.aspx.cs">
+      <DependentUpon>CurrencyRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\CurrencyRate.aspx.designer.cs">
+      <DependentUpon>CurrencyRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CurrencyWithRates.aspx.cs">
+      <DependentUpon>CurrencyWithRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\CurrencyWithRates.aspx.designer.cs">
+      <DependentUpon>CurrencyWithRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DetailedView.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>DetailedView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DetailedView.aspx.designer.cs">
+      <DependentUpon>DetailedView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FlashViewer.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FlashViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FlashViewer.aspx.designer.cs">
+      <DependentUpon>FlashViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FullView.aspx.cs">
+      <DependentUpon>FullView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FullView.aspx.designer.cs">
+      <DependentUpon>FullView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Help.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ModificationRequest.aspx.cs">
+      <DependentUpon>ModificationRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ModificationRequest.aspx.designer.cs">
+      <DependentUpon>ModificationRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PreDashBoard.aspx.cs">
+      <DependentUpon>PreDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PreDashBoard.aspx.designer.cs">
+      <DependentUpon>PreDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PrintViewer.aspx.cs">
+      <DependentUpon>PrintViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PrintViewer.aspx.designer.cs">
+      <DependentUpon>PrintViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProcessEngine.aspx.cs">
+      <DependentUpon>ProcessEngine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ProcessEngine.aspx.designer.cs">
+      <DependentUpon>ProcessEngine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProcessEngine1x.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ProcessEngine1x.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProcessEngine1x.aspx.designer.cs">
+      <DependentUpon>ProcessEngine1x.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Region.aspx.cs">
+      <DependentUpon>Region.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Region.aspx.designer.cs">
+      <DependentUpon>Region.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SessionExpire.aspx.cs">
+      <DependentUpon>SessionExpire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SessionExpire.aspx.designer.cs">
+      <DependentUpon>SessionExpire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SessionKeepAlive.aspx.cs">
+      <DependentUpon>SessionKeepAlive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SessionKeepAlive.aspx.designer.cs">
+      <DependentUpon>SessionKeepAlive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SetCompany.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SetCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SetCompany.aspx.designer.cs">
+      <DependentUpon>SetCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UploadAmex.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UploadAmex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UploadAmex.aspx.designer.cs">
+      <DependentUpon>UploadAmex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UploadText.aspx.cs">
+      <DependentUpon>UploadText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UploadText.aspx.designer.cs">
+      <DependentUpon>UploadText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UploadTextJobOvr.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UploadTextJobOvr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UploadTextJobOvr.aspx.designer.cs">
+      <DependentUpon>UploadTextJobOvr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\AccountControl.aspx.cs">
+      <DependentUpon>AccountControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\AccountControl.aspx.designer.cs">
+      <DependentUpon>AccountControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\AccountFin.aspx.cs">
+      <DependentUpon>AccountFin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\AccountFin.aspx.designer.cs">
+      <DependentUpon>AccountFin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\AccountingLayout.aspx.cs">
+      <DependentUpon>AccountingLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\AccountingLayout.aspx.designer.cs">
+      <DependentUpon>AccountingLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\AccountingLayoutItems.aspx.cs">
+      <DependentUpon>AccountingLayoutItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\AccountingLayoutItems.aspx.designer.cs">
+      <DependentUpon>AccountingLayoutItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\AccountProject.aspx.cs">
+      <DependentUpon>AccountProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\AccountProject.aspx.designer.cs">
+      <DependentUpon>AccountProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\BankTransfer.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>BankTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\BankTransfer.aspx.designer.cs">
+      <DependentUpon>BankTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Batch.aspx.cs">
+      <DependentUpon>Batch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Batch.aspx.designer.cs">
+      <DependentUpon>Batch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\CashJournal.aspx.cs">
+      <DependentUpon>CashJournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\CashJournal.aspx.designer.cs">
+      <DependentUpon>CashJournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\COA.aspx.cs">
+      <DependentUpon>COA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\COA.aspx.designer.cs">
+      <DependentUpon>COA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\COAEntry.aspx.cs">
+      <DependentUpon>COAEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\COAEntry.aspx.designer.cs">
+      <DependentUpon>COAEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Commercial.aspx.cs">
+      <DependentUpon>Commercial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Commercial.aspx.designer.cs">
+      <DependentUpon>Commercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\CommercialBudget.aspx.cs">
+      <DependentUpon>CommercialBudget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\CommercialBudget.aspx.designer.cs">
+      <DependentUpon>CommercialBudget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\ControlAccount.aspx.cs">
+      <DependentUpon>ControlAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\ControlAccount.aspx.designer.cs">
+      <DependentUpon>ControlAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\ControlCenter.aspx.cs">
+      <DependentUpon>ControlCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\ControlCenter.aspx.designer.cs">
+      <DependentUpon>ControlCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\CustomerProject.aspx.cs">
+      <DependentUpon>CustomerProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\CustomerProject.aspx.designer.cs">
+      <DependentUpon>CustomerProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\DirectorProfit.aspx.cs">
+      <DependentUpon>DirectorProfit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\DirectorProfit.aspx.designer.cs">
+      <DependentUpon>DirectorProfit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Division.aspx.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Division.aspx.designer.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\FiscalYearPeriod.aspx.cs">
+      <DependentUpon>FiscalYearPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\FiscalYearPeriod.aspx.designer.cs">
+      <DependentUpon>FiscalYearPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\JobBudget.aspx.cs">
+      <DependentUpon>JobBudget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\JobBudget.aspx.designer.cs">
+      <DependentUpon>JobBudget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\JobType.aspx.cs">
+      <DependentUpon>JobType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\JobType.aspx.designer.cs">
+      <DependentUpon>JobType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Journals.aspx.cs">
+      <DependentUpon>Journals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Journals.aspx.designer.cs">
+      <DependentUpon>Journals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\JournalsHyb.aspx.cs">
+      <DependentUpon>JournalsHyb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\JournalsHyb.aspx.designer.cs">
+      <DependentUpon>JournalsHyb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Pettycashjournal.aspx.cs">
+      <DependentUpon>Pettycashjournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Pettycashjournal.aspx.designer.cs">
+      <DependentUpon>Pettycashjournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Profit.aspx.cs">
+      <DependentUpon>Profit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Profit.aspx.designer.cs">
+      <DependentUpon>Profit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\ProfitVariable.aspx.cs">
+      <DependentUpon>ProfitVariable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\ProfitVariable.aspx.designer.cs">
+      <DependentUpon>ProfitVariable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\ProjectPCAcct.aspx.cs">
+      <DependentUpon>ProjectPCAcct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\ProjectPCAcct.aspx.designer.cs">
+      <DependentUpon>ProjectPCAcct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\ProjectReturns.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ProjectReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\ProjectReturns.aspx.designer.cs">
+      <DependentUpon>ProjectReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\SubAccount.aspx.cs">
+      <DependentUpon>SubAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\SubAccount.aspx.designer.cs">
+      <DependentUpon>SubAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\SubAccountLayout.aspx.cs">
+      <DependentUpon>SubAccountLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\SubAccountLayout.aspx.designer.cs">
+      <DependentUpon>SubAccountLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\TotalEngine.aspx.cs">
+      <DependentUpon>TotalEngine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\TotalEngine.aspx.designer.cs">
+      <DependentUpon>TotalEngine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financials\TotalSelection.aspx.cs">
+      <DependentUpon>TotalSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financials\TotalSelection.aspx.designer.cs">
+      <DependentUpon>TotalSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HttpHandlers\AutoFillHandler.ashx.cs">
+      <DependentUpon>AutoFillHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpHandlers\GenView.ashx.cs">
+      <DependentUpon>GenView.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\PopUp.Master.cs">
+      <DependentUpon>PopUp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\PopUp.Master.designer.cs">
+      <DependentUpon>PopUp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\APInvoice.aspx.cs">
+      <DependentUpon>APInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\APInvoice.aspx.designer.cs">
+      <DependentUpon>APInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\APMInvoice.aspx.cs">
+      <DependentUpon>APMInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\APMInvoice.aspx.designer.cs">
+      <DependentUpon>APMInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\CheckHistory.aspx.cs">
+      <DependentUpon>CheckHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\CheckHistory.aspx.designer.cs">
+      <DependentUpon>CheckHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\Code1099T4.aspx.cs">
+      <DependentUpon>Code1099T4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\Code1099T4.aspx.designer.cs">
+      <DependentUpon>Code1099T4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\GenInv.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GenInv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\GenInv.aspx.designer.cs">
+      <DependentUpon>GenInv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\GenInvoice.aspx.cs">
+      <DependentUpon>GenInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\GenInvoice.aspx.designer.cs">
+      <DependentUpon>GenInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\ManualCheck.aspx.cs">
+      <DependentUpon>ManualCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\ManualCheck.aspx.designer.cs">
+      <DependentUpon>ManualCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\PaymentRequest.aspx.cs">
+      <DependentUpon>PaymentRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\PaymentRequest.aspx.designer.cs">
+      <DependentUpon>PaymentRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\PCManJobCheck.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>PCManJobCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\PCManJobCheck.aspx.designer.cs">
+      <DependentUpon>PCManJobCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\PCManualCheck.aspx.cs">
+      <DependentUpon>PCManualCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\PCManualCheck.aspx.designer.cs">
+      <DependentUpon>PCManualCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\SelectInvoice.aspx.cs">
+      <DependentUpon>SelectInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\SelectInvoice.aspx.designer.cs">
+      <DependentUpon>SelectInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\SelectRequest.aspx.cs">
+      <DependentUpon>SelectRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\SelectRequest.aspx.designer.cs">
+      <DependentUpon>SelectRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\Vendor.aspx.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\Vendor.aspx.designer.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VendorAccount.aspx.cs">
+      <DependentUpon>VendorAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\VendorAccount.aspx.designer.cs">
+      <DependentUpon>VendorAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VendorCommercial.aspx.cs">
+      <DependentUpon>VendorCommercial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\VendorCommercial.aspx.designer.cs">
+      <DependentUpon>VendorCommercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\vendorGroup.aspx.cs">
+      <DependentUpon>vendorGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\vendorGroup.aspx.designer.cs">
+      <DependentUpon>vendorGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VendorPCAccount.aspx.cs">
+      <DependentUpon>VendorPCAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\VendorPCAccount.aspx.designer.cs">
+      <DependentUpon>VendorPCAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VendorShip.aspx.cs">
+      <DependentUpon>VendorShip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\VendorShip.aspx.designer.cs">
+      <DependentUpon>VendorShip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VendorTerms.aspx.cs">
+      <DependentUpon>VendorTerms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\VendorTerms.aspx.designer.cs">
+      <DependentUpon>VendorTerms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VoidCheck.aspx.cs">
+      <DependentUpon>VoidCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payables\VoidCheck.aspx.designer.cs">
+      <DependentUpon>VoidCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VoidCheckHistory.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>VoidCheckHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payables\VoidCheckHistory.aspx.designer.cs">
+      <DependentUpon>VoidCheckHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\Attachement.aspx.cs">
+      <DependentUpon>Attachement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUps\Attachement.aspx.designer.cs">
+      <DependentUpon>Attachement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\EmailPDF.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EmailPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\EmailPDF.aspx.designer.cs">
+      <DependentUpon>EmailPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\FramePDF.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FramePDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\FramePDF.aspx.designer.cs">
+      <DependentUpon>FramePDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\Notes.aspx.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUps\Notes.aspx.designer.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PrintPopUp.aspx.cs">
+      <DependentUpon>PrintPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUps\PrintPopUp.aspx.designer.cs">
+      <DependentUpon>PrintPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\Secure.aspx.cs">
+      <DependentUpon>Secure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUps\Secure.aspx.designer.cs">
+      <DependentUpon>Secure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\ShowPDF.aspx.cs">
+      <DependentUpon>ShowPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUps\ShowPDF.aspx.designer.cs">
+      <DependentUpon>ShowPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\PurchaseOrder.aspx.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchasing\PurchaseOrder.aspx.designer.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\ARBillingType.aspx.cs">
+      <DependentUpon>ARBillingType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receivables\ARBillingType.aspx.designer.cs">
+      <DependentUpon>ARBillingType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\ARinvDetail.aspx.cs">
+      <DependentUpon>ARinvDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receivables\ARinvDetail.aspx.designer.cs">
+      <DependentUpon>ARinvDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\ARinvoice.aspx.cs">
+      <DependentUpon>ARinvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receivables\ARinvoice.aspx.designer.cs">
+      <DependentUpon>ARinvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receivables\Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\CustPayTerms.aspx.cs">
+      <DependentUpon>CustPayTerms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receivables\CustPayTerms.aspx.designer.cs">
+      <DependentUpon>CustPayTerms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MyReports.aspx.cs">
+      <DependentUpon>MyReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MyReports.aspx.designer.cs">
+      <DependentUpon>MyReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Shipment\FedRateService_Local.asmx.cs">
+      <DependentUpon>FedRateService_Local.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shipment\FedShipService_Local.asmx.cs">
+      <DependentUpon>FedShipService_Local.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shipment\FedTrackService_Local.asmx.cs">
+      <DependentUpon>FedTrackService_Local.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shipment\Ship.aspx.cs">
+      <DependentUpon>Ship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shipment\Ship.aspx.designer.cs">
+      <DependentUpon>Ship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ButtonsUserControl.ascx.cs">
+      <DependentUpon>ButtonsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ButtonsUserControl.ascx.designer.cs">
+      <DependentUpon>ButtonsUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ChartUserControl.ascx.cs">
+      <DependentUpon>ChartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ChartUserControl.ascx.designer.cs">
+      <DependentUpon>ChartUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ChildGridView.ascx.cs">
+      <DependentUpon>ChildGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ChildGridView.ascx.designer.cs">
+      <DependentUpon>ChildGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GridViewControl.ascx.cs">
+      <DependentUpon>GridViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\GridViewControl.ascx.designer.cs">
+      <DependentUpon>GridViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MasterPages\TopLeft.Master.cs">
+      <DependentUpon>TopLeft.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\TopLeft.Master.designer.cs">
+      <DependentUpon>TopLeft.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ParentChildGV.ascx.cs">
+      <DependentUpon>ParentChildGV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ParentChildGV.ascx.designer.cs">
+      <DependentUpon>ParentChildGV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Fedex_Express_US_Domestic_Shipping\Reference.cs" />
+    <Compile Include="Web References\Fedex_Rate_Services\Reference.cs" />
+    <Compile Include="Web References\Fedex_Ship_Services\Reference.cs" />
+    <Compile Include="Web References\Fedex_Track_Services\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\SessionKeepAlive.aspx" />
+    <Content Include="Receivables\ARinvDetail.aspx" />
+    <Content Include="Third Party DLL\ITextsharp.dll" />
+    <Content Include="Third Party DLL\NLog.dll" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\TopLeft.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\LAjit\Lajit.css" />
+    <Content Include="App_Themes\LAjit\Lajit.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Banking\Bank.aspx" />
+    <Content Include="Common\City.aspx" />
+    <Content Include="Common\ContentError.aspx" />
+    <Content Include="Common\Country.aspx" />
+    <Content Include="Common\County.aspx" />
+    <Content Include="Common\Currency.aspx" />
+    <Content Include="Common\CurrencyRate.aspx" />
+    <Content Include="Common\DashBoard.aspx" />
+    <Content Include="Common\Login.aspx" />
+    <Content Include="Common\PreDashBoard.aspx" />
+    <Content Include="Common\Region.aspx" />
+    <Content Include="Financials\AccountControl.aspx" />
+    <Content Include="Financials\AccountFin.aspx" />
+    <Content Include="Financials\AccountingLayout.aspx" />
+    <Content Include="Financials\AccountingLayoutItems.aspx" />
+    <Content Include="Financials\AccountProject.aspx" />
+    <Content Include="Financials\COA.aspx" />
+    <Content Include="Financials\ControlAccount.aspx" />
+    <Content Include="Financials\ControlCenter.aspx" />
+    <Content Include="Financials\JobBudget.aspx" />
+    <Content Include="Financials\JobType.aspx" />
+    <Content Include="Financials\Project.aspx" />
+    <Content Include="Financials\SubAccount.aspx" />
+    <Content Include="Financials\SubAccountLayout.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Payables\Code1099T4.aspx" />
+    <Content Include="Payables\vendorGroup.aspx" />
+    <Content Include="Payables\VendorShip.aspx" />
+    <Content Include="PopUps\Attachement.aspx" />
+    <Content Include="PopUps\Notes.aspx" />
+    <Content Include="PopUps\PrintPopUp.aspx" />
+    <Content Include="PopUps\Secure.aspx" />
+    <Content Include="Third Party DLL\Ajax.dll" />
+    <Content Include="Third Party DLL\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="UserControls\ButtonsUserControl.ascx" />
+    <Content Include="UserControls\GridViewControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\LAjit\Images\0.gif" />
+    <Content Include="App_Themes\LAjit\Images\00.gif" />
+    <Content Include="App_Themes\LAjit\Images\1.gif" />
+    <Content Include="App_Themes\LAjit\Images\2.gif" />
+    <Content Include="App_Themes\LAjit\Images\3.gif" />
+    <Content Include="App_Themes\LAjit\Images\4.gif" />
+    <Content Include="App_Themes\LAjit\Images\5.gif" />
+    <Content Include="App_Themes\LAjit\Images\6.gif" />
+    <Content Include="App_Themes\LAjit\Images\7.gif" />
+    <Content Include="App_Themes\LAjit\Images\8.gif" />
+    <Content Include="App_Themes\LAjit\Images\9.gif" />
+    <Content Include="App_Themes\LAjit\Images\abc-studios-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\abc-studios-but.png" />
+    <Content Include="App_Themes\LAjit\Images\acc-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\acc-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\accountant-down1.gif" />
+    <Content Include="App_Themes\LAjit\Images\accountant-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\accountant.png" />
+    <Content Include="App_Themes\LAjit\Images\accountant_over.png" />
+    <Content Include="App_Themes\LAjit\Images\add-but.png" />
+    <Content Include="App_Themes\LAjit\Images\add-clone-but.png" />
+    <Content Include="App_Themes\LAjit\Images\add-clone-over.png" />
+    <Content Include="App_Themes\LAjit\Images\add-clone.png" />
+    <Content Include="App_Themes\LAjit\Images\add-find-but.png" />
+    <Content Include="App_Themes\LAjit\Images\add-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\add-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\add-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\add-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\add-remove-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\add-remove-but.png" />
+    <Content Include="App_Themes\LAjit\Images\addhistory-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\addhistory-but.png" />
+    <Content Include="App_Themes\LAjit\Images\add_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\add_popup_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\add_popup_icon_over.png" />
+    <Content Include="App_Themes\LAjit\Images\add_symbol.gif" />
+    <Content Include="App_Themes\LAjit\Images\add_symbol.png" />
+    <Content Include="App_Themes\LAjit\Images\ajax-loader.gif" />
+    <Content Include="App_Themes\LAjit\Images\alert-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\alert-but.png" />
+    <Content Include="App_Themes\LAjit\Images\Animation.png" />
+    <Content Include="App_Themes\LAjit\Images\AnimationSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\approval.GIF" />
+    <Content Include="App_Themes\LAjit\Images\Approved.png" />
+    <Content Include="App_Themes\LAjit\Images\arrow-first.gif" />
+    <Content Include="App_Themes\LAjit\Images\arrow-last.gif" />
+    <Content Include="App_Themes\LAjit\Images\arrow-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\arrow-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\arrows-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\arrows.gif" />
+    <Content Include="App_Themes\LAjit\Images\assisant.png" />
+    <Content Include="App_Themes\LAjit\Images\assisant_over.png" />
+    <Content Include="App_Themes\LAjit\Images\attach-but.png" />
+    <Content Include="App_Themes\LAjit\Images\attached_sym.GIF" />
+    <Content Include="App_Themes\LAjit\Images\attached_sym.JPG" />
+    <Content Include="App_Themes\LAjit\Images\attachment-icon-data-over.png" />
+    <Content Include="App_Themes\LAjit\Images\attachment-icon-data.png" />
+    <Content Include="App_Themes\LAjit\Images\attachment-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\attachment-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\attachment-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\attachment_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\banking-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\banking-but.png" />
+    <Content Include="App_Themes\LAjit\Images\bg-grad.gif" />
+    <Content Include="App_Themes\LAjit\Images\blank.gif" />
+    <Content Include="App_Themes\LAjit\Images\btctcard-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\btctcard-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\btctcard-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\btctcard-but.png" />
+    <Content Include="App_Themes\LAjit\Images\but-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\c.gif" />
+    <Content Include="App_Themes\LAjit\Images\calc-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\calc-mid-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\calc-top-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\calculator.png" />
+    <Content Include="App_Themes\LAjit\Images\calendar-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\Cancel-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\cancel-but.png" />
+    <Content Include="App_Themes\LAjit\Images\center_tabmenu.gif" />
+    <Content Include="App_Themes\LAjit\Images\clerk-np-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\clerk-np-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\clerk-np-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\close-arrow.gif" />
+    <Content Include="App_Themes\LAjit\Images\close-but.png" />
+    <Content Include="App_Themes\LAjit\Images\Commercials.png" />
+    <Content Include="App_Themes\LAjit\Images\CommercialsSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\company1-over.png" />
+    <Content Include="App_Themes\LAjit\Images\company1.png" />
+    <Content Include="App_Themes\LAjit\Images\company2.png" />
+    <Content Include="App_Themes\LAjit\Images\company2_over.png" />
+    <Content Include="App_Themes\LAjit\Images\Construction.png" />
+    <Content Include="App_Themes\LAjit\Images\ConstructionSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\continue-add-but.png" />
+    <Content Include="App_Themes\LAjit\Images\continue-add-but_old.png" />
+    <Content Include="App_Themes\LAjit\Images\CorporateDiv.png" />
+    <Content Include="App_Themes\LAjit\Images\CorporateDivSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\CorporateICT.png" />
+    <Content Include="App_Themes\LAjit\Images\CorporateICTSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\CorporateLedger.png" />
+    <Content Include="App_Themes\LAjit\Images\CorporateLedgerSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\cross.gif" />
+    <Content Include="App_Themes\LAjit\Images\curve-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\curve-left.png" />
+    <Content Include="App_Themes\LAjit\Images\curve-middle.gif" />
+    <Content Include="App_Themes\LAjit\Images\curve-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\dash-arrow.png" />
+    <Content Include="App_Themes\LAjit\Images\dash-icon_small.png" />
+    <Content Include="App_Themes\LAjit\Images\DefCompany-over.JPG" />
+    <Content Include="App_Themes\LAjit\Images\DefCompany-over.png" />
+    <Content Include="App_Themes\LAjit\Images\DefCompany.JPG" />
+    <Content Include="App_Themes\LAjit\Images\DefCompany.png" />
+    <Content Include="App_Themes\LAjit\Images\DefEntity-over.JPG" />
+    <Content Include="App_Themes\LAjit\Images\DefEntity-over.png" />
+    <Content Include="App_Themes\LAjit\Images\DefEntity.JPG" />
+    <Content Include="App_Themes\LAjit\Images\DefEntity.png" />
+    <Content Include="App_Themes\LAjit\Images\DefRole-over.JPG" />
+    <Content Include="App_Themes\LAjit\Images\DefRole-over.png" />
+    <Content Include="App_Themes\LAjit\Images\DefRole.JPG" />
+    <Content Include="App_Themes\LAjit\Images\DefRole.png" />
+    <Content Include="App_Themes\LAjit\Images\delete-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\delete-but.png" />
+    <Content Include="App_Themes\LAjit\Images\delete-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\delete-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\delete-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\delete_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\delete_popup_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\delete_popup_icon_over.png" />
+    <Content Include="App_Themes\LAjit\Images\demotop.png" />
+    <Content Include="App_Themes\LAjit\Images\DHL.GIF" />
+    <Content Include="App_Themes\LAjit\Images\dhl_logo.gif" />
+    <Content Include="App_Themes\LAjit\Images\dirty.gif" />
+    <Content Include="App_Themes\LAjit\Images\documents-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\documents-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\documents-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\documents-but.png" />
+    <Content Include="App_Themes\LAjit\Images\dot.gif" />
+    <Content Include="App_Themes\LAjit\Images\down-arrow.GIF" />
+    <Content Include="App_Themes\LAjit\Images\download_popup_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\download_popup_icon_over.png" />
+    <Content Include="App_Themes\LAjit\Images\email_icon1.png" />
+    <Content Include="App_Themes\LAjit\Images\email_icon2.png" />
+    <Content Include="App_Themes\LAjit\Images\enter-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\enter-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\enter-left.png" />
+    <Content Include="App_Themes\LAjit\Images\enter-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\enter-right.png" />
+    <Content Include="App_Themes\LAjit\Images\entity1.png" />
+    <Content Include="App_Themes\LAjit\Images\entity1_over.png" />
+    <Content Include="App_Themes\LAjit\Images\entity2.png" />
+    <Content Include="App_Themes\LAjit\Images\entity2_over.png" />
+    <Content Include="App_Themes\LAjit\Images\entity3-over.png" />
+    <Content Include="App_Themes\LAjit\Images\entity3.png" />
+    <Content Include="App_Themes\LAjit\Images\entity3_over.png" />
+    <Content Include="App_Themes\LAjit\Images\entry-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\entry-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\equals.gif" />
+    <Content Include="App_Themes\LAjit\Images\error-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\error-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\error-img.gif" />
+    <Content Include="App_Themes\LAjit\Images\error-img.png" />
+    <Content Include="App_Themes\LAjit\Images\error-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\error.PNG" />
+    <Content Include="App_Themes\LAjit\Images\ERROR_getFlashPlayer.gif" />
+    <Content Include="App_Themes\LAjit\Images\excel_icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\excel_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\exit.png" />
+    <Content Include="App_Themes\LAjit\Images\favicon.ico" />
+    <Content Include="App_Themes\LAjit\Images\Features.png" />
+    <Content Include="App_Themes\LAjit\Images\FeaturesSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\FEDEX.GIF" />
+    <Content Include="App_Themes\LAjit\Images\financials-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\financials-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\financials-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\financials-but.png" />
+    <Content Include="App_Themes\LAjit\Images\financials-test.PNG" />
+    <Content Include="App_Themes\LAjit\Images\find-but.png" />
+    <Content Include="App_Themes\LAjit\Images\find-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\find-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\find-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\find-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\find.gif" />
+    <Content Include="App_Themes\LAjit\Images\find_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\floating-close.png" />
+    <Content Include="App_Themes\LAjit\Images\footnote-icon-data-over.png" />
+    <Content Include="App_Themes\LAjit\Images\footnote-icon-data.png" />
+    <Content Include="App_Themes\LAjit\Images\footnote-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\footnote-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\footnote-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\footnote_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\form-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\FrameLoader.jpg" />
+    <Content Include="App_Themes\LAjit\Images\globalhome_fedex_corp_logo.jpeg" />
+    <Content Include="App_Themes\LAjit\Images\go-but1.gif" />
+    <Content Include="App_Themes\LAjit\Images\gradiant1.jpg" />
+    <Content Include="App_Themes\LAjit\Images\gradiant2.jpg" />
+    <Content Include="App_Themes\LAjit\Images\grid-chart.png" />
+    <Content Include="App_Themes\LAjit\Images\grid-excel.gif" />
+    <Content Include="App_Themes\LAjit\Images\grid-excel.png" />
+    <Content Include="App_Themes\LAjit\Images\grid-find-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\grid-html.gif" />
+    <Content Include="App_Themes\LAjit\Images\grid-html.png" />
+    <Content Include="App_Themes\LAjit\Images\grid-pdf.gif" />
+    <Content Include="App_Themes\LAjit\Images\grid-pdf.png" />
+    <Content Include="App_Themes\LAjit\Images\grid-print.png" />
+    <Content Include="App_Themes\LAjit\Images\grid3-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\GridViewSelect.jpg" />
+    <Content Include="App_Themes\LAjit\Images\GridViewSelect.png" />
+    <Content Include="App_Themes\LAjit\Images\GridViewToolTip.jpg" />
+    <Content Include="App_Themes\LAjit\Images\GridViewToolTip.png" />
+    <Content Include="App_Themes\LAjit\Images\grid_lock.jpg" />
+    <Content Include="App_Themes\LAjit\Images\grid_lock.png" />
+    <Content Include="App_Themes\LAjit\Images\Grid_Word.gif" />
+    <Content Include="App_Themes\LAjit\Images\Grid_Word.PNG" />
+    <Content Include="App_Themes\LAjit\Images\helpsearch.jpeg" />
+    <Content Include="App_Themes\LAjit\Images\helpsearch.png" />
+    <Content Include="App_Themes\LAjit\Images\hide-shortcuts-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\hide-shortcuts-but.png" />
+    <Content Include="App_Themes\LAjit\Images\history-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\history-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\history-but.png" />
+    <Content Include="App_Themes\LAjit\Images\history-down1.gif" />
+    <Content Include="App_Themes\LAjit\Images\history-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\history-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\home-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\home-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\home-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\home-but.png" />
+    <Content Include="App_Themes\LAjit\Images\html_icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\html_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\ico-close.gif" />
+    <Content Include="App_Themes\LAjit\Images\icon1.png" />
+    <Content Include="App_Themes\LAjit\Images\icon2.png" />
+    <Content Include="App_Themes\LAjit\Images\indicator.gif" />
+    <Content Include="App_Themes\LAjit\Images\Infomercial.png" />
+    <Content Include="App_Themes\LAjit\Images\InfomercialSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\InternetProd.png" />
+    <Content Include="App_Themes\LAjit\Images\InternetProdSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\internetproductionsmall.png" />
+    <Content Include="App_Themes\LAjit\Images\intoo.png" />
+    <Content Include="App_Themes\LAjit\Images\jobcosting-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\jobcosting-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\jobcosting-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\jobcosting-but.png" />
+    <Content Include="App_Themes\LAjit\Images\jobwatch-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\jobwatch-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\jobwatch-head1.gif" />
+    <Content Include="App_Themes\LAjit\Images\jobwatch-head2.gif" />
+    <Content Include="App_Themes\LAjit\Images\jqGridInfo.png" />
+    <Content Include="App_Themes\LAjit\Images\jqGridInfo2.png" />
+    <Content Include="App_Themes\LAjit\Images\jqGridSelect.png" />
+    <Content Include="App_Themes\LAjit\Images\jqGridToolTip.png" />
+    <Content Include="App_Themes\LAjit\Images\lajit-logo-help.gif" />
+    <Content Include="App_Themes\LAjit\Images\lajit-logo-help.jpg" />
+    <Content Include="App_Themes\LAjit\Images\lajit-logo.gif" />
+    <Content Include="App_Themes\LAjit\Images\lajit-logos.JPG" />
+    <Content Include="App_Themes\LAjit\Images\lajit-rptlogo.JPG" />
+    <Content Include="App_Themes\LAjit\Images\lajitcenter-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\LAjit_logo.jpg" />
+    <Content Include="App_Themes\LAjit\Images\lajit_rpt_logo.jpg" />
+    <Content Include="App_Themes\LAjit\Images\lajit_small-greylogo_03.JPG" />
+    <Content Include="App_Themes\LAjit\Images\lavalamp-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\lavalamp-left.png" />
+    <Content Include="App_Themes\LAjit\Images\lavalamp-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\lavalamp-right.png" />
+    <Content Include="App_Themes\LAjit\Images\left-blue-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\left-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\left-top.png" />
+    <Content Include="App_Themes\LAjit\Images\left-top_old.gif" />
+    <Content Include="App_Themes\LAjit\Images\left.gif" />
+    <Content Include="App_Themes\LAjit\Images\left.png" />
+    <Content Include="App_Themes\LAjit\Images\lite--add-clone.png" />
+    <Content Include="App_Themes\LAjit\Images\lite-preview-over.png" />
+    <Content Include="App_Themes\LAjit\Images\loading-lajit.gif" />
+    <Content Include="App_Themes\LAjit\Images\lock_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\lock_sym.GIF" />
+    <Content Include="App_Themes\LAjit\Images\login-bg.jpg" />
+    <Content Include="App_Themes\LAjit\Images\login-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\login-but1.png" />
+    <Content Include="App_Themes\LAjit\Images\login-main-img.jpg" />
+    <Content Include="App_Themes\LAjit\Images\login-mid-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\login-page.jpg" />
+    <Content Include="App_Themes\LAjit\Images\login-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\login-right.png" />
+    <Content Include="App_Themes\LAjit\Images\login.gif" />
+    <Content Include="App_Themes\LAjit\Images\loginbg.gif" />
+    <Content Include="App_Themes\LAjit\Images\logo-bottom.gif" />
+    <Content Include="App_Themes\LAjit\Images\LOGO_M.gif" />
+    <Content Include="App_Themes\LAjit\Images\LOGO_M.PNG" />
+    <Content Include="App_Themes\LAjit\Images\magglass.jpg" />
+    <Content Include="App_Themes\LAjit\Images\max.gif" />
+    <Content Include="App_Themes\LAjit\Images\memberslogin-tit.gif" />
+    <Content Include="App_Themes\LAjit\Images\mescenter-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\message-center-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\message-center-total.gif" />
+    <Content Include="App_Themes\LAjit\Images\messagecenter-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\messagecenter-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\messagecenter-head2.gif" />
+    <Content Include="App_Themes\LAjit\Images\mid-new-bg.png" />
+    <Content Include="App_Themes\LAjit\Images\minus-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\minus-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\minus.gif" />
+    <Content Include="App_Themes\LAjit\Images\minus_sym.gif" />
+    <Content Include="App_Themes\LAjit\Images\modify-but.png" />
+    <Content Include="App_Themes\LAjit\Images\modify-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\modify-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\modify-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\modify_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\modify_popup_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\modify_popup_icon_over.png" />
+    <Content Include="App_Themes\LAjit\Images\multiply.gif" />
+    <Content Include="App_Themes\LAjit\Images\MusicTour.png" />
+    <Content Include="App_Themes\LAjit\Images\MusicTourSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\MusicVideo.png" />
+    <Content Include="App_Themes\LAjit\Images\MusicVideoSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\myreports-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\myreports-but.png" />
+    <Content Include="App_Themes\LAjit\Images\myshortcuts.gif" />
+    <Content Include="App_Themes\LAjit\Images\myshortcuts.png" />
+    <Content Include="App_Themes\LAjit\Images\newvendor-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\newvendor-small-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\newvendor-small.gif" />
+    <Content Include="App_Themes\LAjit\Images\newvendor.gif" />
+    <Content Include="App_Themes\LAjit\Images\next-arrow.png" />
+    <Content Include="App_Themes\LAjit\Images\next-small.gif" />
+    <Content Include="App_Themes\LAjit\Images\Node-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\note-but.png" />
+    <Content Include="App_Themes\LAjit\Images\notes_sym.GIF" />
+    <Content Include="App_Themes\LAjit\Images\note_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\np-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\np-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\np-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\np-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\nporder-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\nporder-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-small-bot.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-small-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-small-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-small-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\nv-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\ok-but.png" />
+    <Content Include="App_Themes\LAjit\Images\open-arrow.gif" />
+    <Content Include="App_Themes\LAjit\Images\OtherProj.png" />
+    <Content Include="App_Themes\LAjit\Images\OtherProjSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\overdue-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\overdue.gif" />
+    <Content Include="App_Themes\LAjit\Images\overdue2.gif" />
+    <Content Include="App_Themes\LAjit\Images\payable-down1.gif" />
+    <Content Include="App_Themes\LAjit\Images\payable-down2.gif" />
+    <Content Include="App_Themes\LAjit\Images\payable-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\payables-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\payables-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\payables-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\payables-but.png" />
+    <Content Include="App_Themes\LAjit\Images\payroll-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\payroll-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\payroll-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\payroll-but.png" />
+    <Content Include="App_Themes\LAjit\Images\pdf_icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\pdf_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\penapprovals-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\pending-approvals-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\pending-approvals-total.gif" />
+    <Content Include="App_Themes\LAjit\Images\pendingapprovals-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\pendingapprovals.gif" />
+    <Content Include="App_Themes\LAjit\Images\pendingapprovals2.gif" />
+    <Content Include="App_Themes\LAjit\Images\perdiem-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\perdiem-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\perdiem-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\perdiem-but.png" />
+    <Content Include="App_Themes\LAjit\Images\pettycash-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\pettycash-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\pettycash-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\pettycash-but.png" />
+    <Content Include="App_Themes\LAjit\Images\plus-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\plus-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\plus.gif" />
+    <Content Include="App_Themes\LAjit\Images\po-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\po-but.png" />
+    <Content Include="App_Themes\LAjit\Images\pop-bot.png" />
+    <Content Include="App_Themes\LAjit\Images\pop-top.png" />
+    <Content Include="App_Themes\LAjit\Images\powered-bot.png" />
+    <Content Include="App_Themes\LAjit\Images\powered-by-lajit-logo.png" />
+    <Content Include="App_Themes\LAjit\Images\powered-lajit.gif" />
+    <Content Include="App_Themes\LAjit\Images\powered-page-bg.png" />
+    <Content Include="App_Themes\LAjit\Images\powered-top.png" />
+    <Content Include="App_Themes\LAjit\Images\PoweredByLajit.png" />
+    <Content Include="App_Themes\LAjit\Images\predash-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\predashboard-header.gif" />
+    <Content Include="App_Themes\LAjit\Images\preference-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\preference-content2.gif" />
+    <Content Include="App_Themes\LAjit\Images\preference-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\preference-head2.gif" />
+    <Content Include="App_Themes\LAjit\Images\preferences-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\preferences-but.png" />
+    <Content Include="App_Themes\LAjit\Images\prev-arrow.png" />
+    <Content Include="App_Themes\LAjit\Images\preview-butover.png" />
+    <Content Include="App_Themes\LAjit\Images\preview-over.png" />
+    <Content Include="App_Themes\LAjit\Images\print-but.png" />
+    <Content Include="App_Themes\LAjit\Images\print-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\print-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\print-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\print-preview20x20.png" />
+    <Content Include="App_Themes\LAjit\Images\print-preview30x30.png" />
+    <Content Include="App_Themes\LAjit\Images\profile-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\profile-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\profile-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\profile-but.png" />
+    <Content Include="App_Themes\LAjit\Images\purchasing-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\purchasing-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\purchasing-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\purchasing-but.png" />
+    <Content Include="App_Themes\LAjit\Images\questionMark.jpg" />
+    <Content Include="App_Themes\LAjit\Images\rabbit_42x28_grey.jpg" />
+    <Content Include="App_Themes\LAjit\Images\rabbit_42x28_white.jpg" />
+    <Content Include="App_Themes\LAjit\Images\rabbit_62x51.jpg" />
+    <Content Include="App_Themes\LAjit\Images\rabbit_88x49.jpg" />
+    <Content Include="App_Themes\LAjit\Images\rates-but.png" />
+    <Content Include="App_Themes\LAjit\Images\receivables-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\receivables-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\receivables-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\receivables-but.png" />
+    <Content Include="App_Themes\LAjit\Images\results-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\results-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\right-head-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\right-title-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\right.gif" />
+    <Content Include="App_Themes\LAjit\Images\right.png" />
+    <Content Include="App_Themes\LAjit\Images\row_add.gif" />
+    <Content Include="App_Themes\LAjit\Images\rptloader.gif" />
+    <Content Include="App_Themes\LAjit\Images\save-but.png" />
+    <Content Include="App_Themes\LAjit\Images\save-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\save-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\save_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\Search-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\secure-but.png" />
+    <Content Include="App_Themes\LAjit\Images\Secure-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\secured-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\secure_popup_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\secure_popup_icon_over.png" />
+    <Content Include="App_Themes\LAjit\Images\security-icon-data-over.png" />
+    <Content Include="App_Themes\LAjit\Images\security-icon-data.png" />
+    <Content Include="App_Themes\LAjit\Images\security-icon-disable.png" />
+    <Content Include="App_Themes\LAjit\Images\security-icon-over.png" />
+    <Content Include="App_Themes\LAjit\Images\security-icon.png" />
+    <Content Include="App_Themes\LAjit\Images\selected-left-sub.gif" />
+    <Content Include="App_Themes\LAjit\Images\selected-left-sub.png" />
+    <Content Include="App_Themes\LAjit\Images\selected-right-sub.gif" />
+    <Content Include="App_Themes\LAjit\Images\selected-right-sub.png" />
+    <Content Include="App_Themes\LAjit\Images\ship-but.png" />
+    <Content Include="App_Themes\LAjit\Images\shipping-banking-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\shipping-banking-but.png" />
+    <Content Include="App_Themes\LAjit\Images\shipping-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\shipping-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\shipping-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\shipping-but.png" />
+    <Content Include="App_Themes\LAjit\Images\shortcut_meu.gif" />
+    <Content Include="App_Themes\LAjit\Images\shortcut_meu.png" />
+    <Content Include="App_Themes\LAjit\Images\show-shortcuts-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\show-shortcuts-but.png" />
+    <Content Include="App_Themes\LAjit\Images\sidebar-top.png" />
+    <Content Include="App_Themes\LAjit\Images\someicon-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\someicon.gif" />
+    <Content Include="App_Themes\LAjit\Images\someicon.png" />
+    <Content Include="App_Themes\LAjit\Images\sony-logo.gif" />
+    <Content Include="App_Themes\LAjit\Images\spacer.gif" />
+    <Content Include="App_Themes\LAjit\Images\SpecialEffects.png" />
+    <Content Include="App_Themes\LAjit\Images\SpecialEffectsSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\splash.gif" />
+    <Content Include="App_Themes\LAjit\Images\submenu-bottom.gif" />
+    <Content Include="App_Themes\LAjit\Images\submenu-bottom.png" />
+    <Content Include="App_Themes\LAjit\Images\submenu-pointer-bottom.gif" />
+    <Content Include="App_Themes\LAjit\Images\submenu-pointer-selected-bottom.png" />
+    <Content Include="App_Themes\LAjit\Images\submenu-pointer-top.png" />
+    <Content Include="App_Themes\LAjit\Images\submenu-selected-bottom.png" />
+    <Content Include="App_Themes\LAjit\Images\submenu-selected-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\submenu-selected-top.png" />
+    <Content Include="App_Themes\LAjit\Images\submit-but.png" />
+    <Content Include="App_Themes\LAjit\Images\submit-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\subsubmenu-top.gif" />
+    <Content Include="App_Themes\LAjit\Images\subsubmenu-top.png" />
+    <Content Include="App_Themes\LAjit\Images\switch-view1-down1.gif" />
+    <Content Include="App_Themes\LAjit\Images\switch-view1-down2.gif" />
+    <Content Include="App_Themes\LAjit\Images\switch-view1-head.gif" />
+    <Content Include="App_Themes\LAjit\Images\switch-view1-head2.gif" />
+    <Content Include="App_Themes\LAjit\Images\switchview-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\switchview-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\switchview-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\tabmenu_right.gif" />
+    <Content Include="App_Themes\LAjit\Images\television.png" />
+    <Content Include="App_Themes\LAjit\Images\televisonmovie.png" />
+    <Content Include="App_Themes\LAjit\Images\tick.gif" />
+    <Content Include="App_Themes\LAjit\Images\title-back-bg.gif" />
+    <Content Include="App_Themes\LAjit\Images\title-left-curve.gif" />
+    <Content Include="App_Themes\LAjit\Images\title-right-curve.gif" />
+    <Content Include="App_Themes\LAjit\Images\title-right-line.gif" />
+    <Content Include="App_Themes\LAjit\Images\tooltip_box.png" />
+    <Content Include="App_Themes\LAjit\Images\tooltip_icon.png" />
+    <Content Include="App_Themes\LAjit\Images\top-left01.gif" />
+    <Content Include="App_Themes\LAjit\Images\top-midbg01.gif" />
+    <Content Include="App_Themes\LAjit\Images\top-right01.gif" />
+    <Content Include="App_Themes\LAjit\Images\TVEpisode.png" />
+    <Content Include="App_Themes\LAjit\Images\TVEpisodeSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\TVMovie.png" />
+    <Content Include="App_Themes\LAjit\Images\TVMovieSmall.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_highlight-hard_100_ffffff_1x100.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_highlight-soft_100_DBEF2_1x100.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-icons_2694e8_256x240.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="App_Themes\LAjit\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\LAjit\Images\undo-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\universal-logo.gif" />
+    <Content Include="App_Themes\LAjit\Images\up-arrow.GIF" />
+    <Content Include="App_Themes\LAjit\Images\update-icon.gif" />
+    <Content Include="App_Themes\LAjit\Images\update-shortcuts-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\update-shortcuts-but.png" />
+    <Content Include="App_Themes\LAjit\Images\Upload_but.PNG" />
+    <Content Include="App_Themes\LAjit\Images\UPS.GIF" />
+    <Content Include="App_Themes\LAjit\Images\useractivity-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\useractivity.gif" />
+    <Content Include="App_Themes\LAjit\Images\useractivity2.gif" />
+    <Content Include="App_Themes\LAjit\Images\users-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\users-but.png" />
+    <Content Include="App_Themes\LAjit\Images\vendor-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendor-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\vendor-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendor-but.png" />
+    <Content Include="App_Themes\LAjit\Images\vendor-but2-over.png" />
+    <Content Include="App_Themes\LAjit\Images\vendor-but2.png" />
+    <Content Include="App_Themes\LAjit\Images\vendor-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendor-list-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendor-list.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendor-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendor.jpg" />
+    <Content Include="App_Themes\LAjit\Images\vendors-screen.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendorstoplay-content.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendorstoplay.gif" />
+    <Content Include="App_Themes\LAjit\Images\vendorstoplay2.gif" />
+    <Content Include="App_Themes\LAjit\Images\videoPlayer.swf" />
+    <Content Include="App_Themes\LAjit\Images\Waiting-Approval.png" />
+    <Content Include="App_Themes\LAjit\Images\waiting-blink-over.JPG" />
+    <Content Include="App_Themes\LAjit\Images\waiting-blink.gif" />
+    <Content Include="App_Themes\LAjit\Images\waiting-blink.JPG" />
+    <Content Include="App_Themes\LAjit\Images\waiting-but-over.gif" />
+    <Content Include="App_Themes\LAjit\Images\waiting-but.gif" />
+    <Content Include="App_Themes\LAjit\Images\waiting-left.gif" />
+    <Content Include="App_Themes\LAjit\Images\waiting-new.gif" />
+    <Content Include="App_Themes\LAjit\Images\waiting-right.gif" />
+    <Content Include="App_Themes\LAjit\Images\waltdisney-but-over.png" />
+    <Content Include="App_Themes\LAjit\Images\waltdisney-but.png" />
+    <Content Include="App_Themes\LAjit\Images\waltdisney-header.gif" />
+    <Content Include="App_Themes\LAjit\Images\waltdisney_logo.gif" />
+    <Content Include="App_Themes\LAjit\Images\web-search.gif" />
+    <Content Include="App_Themes\LAjit\Images\xyz-entertainment.gif" />
+    <Content Include="App_Themes\LAjit\jquery-ui-1.7.2.custom.css" />
+    <Content Include="App_Themes\LAjit\LajitCDN.css" />
+    <Content Include="App_Themes\LAjit\menu.css" />
+    <Content Include="App_Themes\LAjit\ui.jqgrid.css" />
+    <Content Include="App_Themes\LAjit\ui.multiselect.css" />
+    <Content Include="Banking\BankControl.aspx" />
+    <Content Include="Banking\ControlAcctMap.aspx" />
+    <Content Include="Banking\PaymentRange.aspx" />
+    <Content Include="ChartTemplates\Blue.xml" />
+    <Content Include="ChartTemplates\WarmTones.xml" />
+    <Content Include="ChartTemplates\WhiteSmoke.xml" />
+    <Content Include="Common\BulkUpload.aspx" />
+    <Content Include="Common\GenProcessEngine.aspx" />
+    <Content Include="Common\GenView.aspx" />
+    <Content Include="Common\HelpAuthor.aspx" />
+    <Content Include="Common\ChartView.aspx" />
+    <Content Include="Common\ChartViewer.aspx" />
+    <Content Include="Common\CurrencyWithRates.aspx" />
+    <Content Include="Common\DetailedView.aspx" />
+    <Content Include="Common\FlashViewer.aspx" />
+    <Content Include="Common\FullView.aspx" />
+    <Content Include="Common\Help.aspx" />
+    <Content Include="Common\ModificationRequest.aspx" />
+    <Content Include="Common\PrintViewer.aspx" />
+    <Content Include="Common\ProcessEngine.aspx" />
+    <Content Include="Common\ProcessEngine1x.aspx" />
+    <Content Include="Common\SessionExpire.aspx" />
+    <Content Include="Common\SetCompany.aspx" />
+    <Content Include="Common\UploadAmex.aspx" />
+    <Content Include="Common\UploadText.aspx" />
+    <Content Include="Common\UploadTextJobOvr.aspx" />
+    <Content Include="Common\UserInfo.aspx" />
+    <Content Include="Financials\BankTransfer.aspx" />
+    <Content Include="Financials\Batch.aspx" />
+    <Content Include="Financials\CashJournal.aspx" />
+    <Content Include="Financials\COAEntry.aspx" />
+    <Content Include="Financials\Commercial.aspx" />
+    <Content Include="Financials\CommercialBudget.aspx" />
+    <Content Include="Financials\CustomerProject.aspx" />
+    <Content Include="Financials\DirectorProfit.aspx" />
+    <Content Include="Financials\Division.aspx" />
+    <Content Include="Financials\Employee.aspx" />
+    <Content Include="Financials\FiscalYearPeriod.aspx" />
+    <Content Include="Financials\Journals.aspx" />
+    <Content Include="Financials\JournalsHyb.aspx" />
+    <Content Include="Financials\Pettycashjournal.aspx" />
+    <Content Include="Financials\Profit.aspx" />
+    <Content Include="Financials\ProfitVariable.aspx" />
+    <Content Include="Financials\ProjectPCAcct.aspx" />
+    <Content Include="Financials\ProjectReturns.aspx" />
+    <Content Include="Financials\TotalEngine.aspx" />
+    <Content Include="Financials\TotalSelection.aspx" />
+    <Content Include="HTML\GenRptHover.htm" />
+    <Content Include="JavaScript\AC_RunActiveContent.js" />
+    <Content Include="JavaScript\AjaxFileUpload.js" />
+    <Content Include="JavaScript\AutoFill.js" />
+    <Content Include="JavaScript\BranchDropDowns.js" />
+    <Content Include="JavaScript\ButtonsUserControl.js" />
+    <Content Include="JavaScript\Calculations.js" />
+    <Content Include="JavaScript\CascadingDropDowns.js" />
+    <Content Include="JavaScript\ChartUserControl.js" />
+    <Content Include="JavaScript\ChildGridView.js" />
+    <Content Include="JavaScript\Common.js" />
+    <Content Include="JavaScript\ExplodedView.js" />
+    <Content Include="JavaScript\FrameManager.js" />
+    <Content Include="JavaScript\GridViewUserControl.js" />
+    <Content Include="JavaScript\jkmegamenu.js" />
+    <Content Include="JavaScript\JqCommon.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.base.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.celledit.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.common.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.custom.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.formedit.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.import.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.inlinedit.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.jqueryui.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.loader.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.locale-en.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.postext.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.setcolumns.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.subgrid.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.tbltogrid.js" />
+    <Content Include="JavaScript\JQGridDebug\grid.treegrid.js" />
+    <Content Include="JavaScript\JQGridDebug\jqDnR.js" />
+    <Content Include="JavaScript\JQGridDebug\jqModal.js" />
+    <Content Include="JavaScript\JQGridDebug\jquery.fmatter.js" />
+    <Content Include="JavaScript\JQGridDebug\jquery.searchFilter.js" />
+    <Content Include="JavaScript\JQGridDebug\JsonXml.js" />
+    <Content Include="JavaScript\JQGridDebug\ui.multiselect.js" />
+    <Content Include="JavaScript\JQMethods.js" />
+    <Content Include="JavaScript\JqScripts.js" />
+    <Content Include="JavaScript\jquery-1.3.2.min.js" />
+    <Content Include="JavaScript\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="JavaScript\jquery.autocomplete.js" />
+    <Content Include="JavaScript\jquery.blockUI.js" />
+    <Content Include="JavaScript\jquery.calculator.js" />
+    <Content Include="JavaScript\jquery.clean.js" />
+    <Content Include="JavaScript\jquery.datepicker.js" />
+    <Content Include="JavaScript\jquery.dialog.js" />
+    <Content Include="JavaScript\jquery.floatingbox.js" />
+    <Content Include="JavaScript\jquery.maskedinput.js" />
+    <Content Include="JavaScript\jquery.mbMenu.js" />
+    <Content Include="JavaScript\jquery.menu.js" />
+    <Content Include="JavaScript\jquery.metadata.js" />
+    <Content Include="JavaScript\jquery.qtip.js" />
+    <Content Include="JavaScript\jquery.sidebar.js" />
+    <Content Include="JavaScript\LAjitListBox.js" />
+    <Content Include="JavaScript\LeftCollapsiblePanel.js" />
+    <Content Include="JavaScript\ljq.js" />
+    <Content Include="JavaScript\Master.js" />
+    <Content Include="JavaScript\Masterlist.js" />
+    <Content Include="JavaScript\menu.js" />
+    <Content Include="JavaScript\ParentChild.js" />
+    <Content Include="JavaScript\System.Web.Extensions\1.0.61025.0\MicrosoftAjax.debug.js" />
+    <Content Include="JavaScript\System.Web.Extensions\1.0.61025.0\MicrosoftAjax.js" />
+    <Content Include="JavaScript\Utility.js" />
+    <Content Include="MasterPages\PopUp.Master" />
+    <Content Include="Payables\APInvoice.aspx" />
+    <Content Include="Payables\APMInvoice.aspx" />
+    <Content Include="Payables\CheckHistory.aspx" />
+    <Content Include="Payables\GenInv.aspx" />
+    <Content Include="Payables\GenInvoice.aspx" />
+    <Content Include="Payables\ManualCheck.aspx" />
+    <Content Include="Payables\PaymentRequest.aspx" />
+    <Content Include="Payables\PCManJobCheck.aspx" />
+    <Content Include="Payables\PCManualCheck.aspx" />
+    <Content Include="Payables\SelectInvoice.aspx" />
+    <Content Include="Payables\SelectRequest.aspx" />
+    <Content Include="Payables\Vendor.aspx" />
+    <Content Include="Payables\VendorAccount.aspx" />
+    <Content Include="Payables\VendorCommercial.aspx" />
+    <Content Include="Payables\VendorPCAccount.aspx" />
+    <Content Include="Payables\VendorTerms.aspx" />
+    <Content Include="Payables\VoidCheck.aspx" />
+    <Content Include="Payables\VoidCheckHistory.aspx" />
+    <Content Include="PopUps\EmailPDF.aspx" />
+    <Content Include="PopUps\FramePDF.aspx" />
+    <Content Include="PopUps\ShowPDF.aspx" />
+    <Content Include="Purchasing\PurchaseOrder.aspx" />
+    <Content Include="Receivables\ARBillingType.aspx" />
+    <Content Include="Receivables\ARinvoice.aspx" />
+    <Content Include="Receivables\Customer.aspx" />
+    <Content Include="Receivables\CustPayTerms.aspx" />
+    <Content Include="Reports\MyReports.aspx" />
+    <Content Include="Shipment\FedRateService_Local.asmx" />
+    <Content Include="Shipment\FedShipService_Local.asmx" />
+    <Content Include="Shipment\FedTrackService_Local.asmx" />
+    <Content Include="Shipment\Ship.aspx" />
+    <Content Include="Third Party DLL\AjaxControlToolkit.dll" />
+    <Content Include="Third Party DLL\DocX.dll" />
+    <Content Include="Third Party DLL\DundasWebChart.dll" />
+    <Content Include="Third Party DLL\ExcelPackage.dll" />
+    <Content Include="Third Party DLL\FredCK.FCKeditorV2.dll" />
+    <Content Include="Third Party DLL\Gios Pdf.NET.dll" />
+    <Content Include="Third Party DLL\LAjitControls.dll" />
+    <Content Include="Third Party DLL\skmRss.dll" />
+    <Content Include="Third Party DLL\WebChart.dll" />
+    <Content Include="UserControls\ChartUserControl.ascx" />
+    <Content Include="UserControls\ChildGridView.ascx" />
+    <Content Include="UserControls\ParentChildGV.ascx" />
+    <Content Include="HttpHandlers\GenView.ashx" />
+    <Content Include="HttpHandlers\AutoFillHandler.ashx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-1.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-10.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-2.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-200.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-3.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-400.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-5.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-501.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-502.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-503.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-601.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-602.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-603.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-604.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-621.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-622.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-641.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-642.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-643.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-651.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-652.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-653.xlsx" />
+    <None Include="ExcelTemplates\ExcelReportTemplate-654.xlsx" />
+    <Content Include="NLog.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\CancelEMailLabelReply.datasource" />
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\CloseReply.datasource" />
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\ProcessEMailLabelReply.datasource" />
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\ProcessShipmentReply.datasource" />
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\Reference.map" />
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\ShipmentReply.datasource" />
+    <None Include="Web References\Fedex_Express_US_Domestic_Shipping\ShipServiceDefinitions.wsdl" />
+    <None Include="Web References\Fedex_Rate_Services\RateAvailableServicesReply.datasource" />
+    <None Include="Web References\Fedex_Rate_Services\RateReply.datasource" />
+    <None Include="Web References\Fedex_Rate_Services\RateServiceDefinitions.wsdl" />
+    <None Include="Web References\Fedex_Rate_Services\Reference.map" />
+    <None Include="Web References\Fedex_Ship_Services\CancelEMailLabelReply.datasource" />
+    <None Include="Web References\Fedex_Ship_Services\CloseReply.datasource" />
+    <None Include="Web References\Fedex_Ship_Services\ProcessEMailLabelReply.datasource" />
+    <None Include="Web References\Fedex_Ship_Services\ProcessShipmentReply.datasource" />
+    <None Include="Web References\Fedex_Ship_Services\Reference.map" />
+    <None Include="Web References\Fedex_Ship_Services\ShipmentReply.datasource" />
+    <None Include="Web References\Fedex_Ship_Services\ShipServiceDefinitions.wsdl" />
+    <None Include="Web References\Fedex_Track_Services\Reference.map" />
+    <None Include="Web References\Fedex_Track_Services\SignatureProofOfDeliveryReply.datasource" />
+    <None Include="Web References\Fedex_Track_Services\TrackNotificationReply.datasource" />
+    <None Include="Web References\Fedex_Track_Services\TrackReply.datasource" />
+    <None Include="Web References\Fedex_Track_Services\TrackServiceDefinitions.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BOL\LAjit_BO.csproj">
+      <Project>{92800E0B-2168-47E4-9FCA-8A58FB25B805}</Project>
+      <Name>LAjit_BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExcelPackage\ExcelPackage.csproj">
+      <Project>{7B288026-5502-4A39-BF41-77E086F3E4A3}</Project>
+      <Name>ExcelPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gios Pdf.NET Source Code\Gios Pdf.NET.csproj">
+      <Project>{C5FC18CF-CE83-4627-930F-42A8F1E2D7AD}</Project>
+      <Name>Gios Pdf.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAjitControls\LAjitControls.csproj">
+      <Project>{21111D9D-3CB9-40A2-8454-B52F3B8F46A5}</Project>
+      <Name>LAjitControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8715</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/LAjitDev1</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+ </Project>

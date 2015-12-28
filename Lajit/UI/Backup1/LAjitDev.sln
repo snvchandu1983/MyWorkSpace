@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAjitDev", "LAjitDev.csproj", "{E56F6ACE-A19C-4FA6-A8C0-4C8182AE647B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAjitControls", "..\LAjitControls\LAjitControls.csproj", "{21111D9D-3CB9-40A2-8454-B52F3B8F46A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gios Pdf.NET", "..\Gios Pdf.NET Source Code\Gios Pdf.NET.csproj", "{C5FC18CF-CE83-4627-930F-42A8F1E2D7AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAjit_DAL", "..\DAL\LAjit_DAL.csproj", "{FBE44F84-AA1C-40B6-B48F-D1D7F903FFE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAjit_BO", "..\BOL\LAjit_BO.csproj", "{92800E0B-2168-47E4-9FCA-8A58FB25B805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelPackage", "..\ExcelPackage\ExcelPackage.csproj", "{7B288026-5502-4A39-BF41-77E086F3E4A3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.59:8080/lajittfs/lajitcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\BOL\\LAjit_BO.csproj
+		SccProjectName1 = ../BOL
+		SccLocalPath1 = ..\\BOL
+		SccProjectUniqueName2 = ..\\DAL\\LAjit_DAL.csproj
+		SccProjectName2 = ../DAL
+		SccLocalPath2 = ..\\DAL
+		SccProjectUniqueName3 = ..\\Gios\u0020Pdf.NET\u0020Source\u0020Code\\Gios\u0020Pdf.NET.csproj
+		SccProjectName3 = ../Gios\u0020Pdf.NET\u0020Source\u0020Code
+		SccLocalPath3 = ..\\Gios\u0020Pdf.NET\u0020Source\u0020Code
+		SccProjectUniqueName4 = ..\\LAjitControls\\LAjitControls.csproj
+		SccProjectName4 = ../LAjitControls
+		SccLocalPath4 = ..\\LAjitControls
+		SccProjectUniqueName5 = LAjitDev.csproj
+		SccLocalPath5 = .
+		SccProjectUniqueName6 = ..\\ExcelPackage\\ExcelPackage.csproj
+		SccProjectName6 = ../ExcelPackage
+		SccLocalPath6 = ..\\ExcelPackage
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E56F6ACE-A19C-4FA6-A8C0-4C8182AE647B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56F6ACE-A19C-4FA6-A8C0-4C8182AE647B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56F6ACE-A19C-4FA6-A8C0-4C8182AE647B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56F6ACE-A19C-4FA6-A8C0-4C8182AE647B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21111D9D-3CB9-40A2-8454-B52F3B8F46A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21111D9D-3CB9-40A2-8454-B52F3B8F46A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21111D9D-3CB9-40A2-8454-B52F3B8F46A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21111D9D-3CB9-40A2-8454-B52F3B8F46A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FC18CF-CE83-4627-930F-42A8F1E2D7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FC18CF-CE83-4627-930F-42A8F1E2D7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FC18CF-CE83-4627-930F-42A8F1E2D7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FC18CF-CE83-4627-930F-42A8F1E2D7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE44F84-AA1C-40B6-B48F-D1D7F903FFE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE44F84-AA1C-40B6-B48F-D1D7F903FFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE44F84-AA1C-40B6-B48F-D1D7F903FFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE44F84-AA1C-40B6-B48F-D1D7F903FFE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{92800E0B-2168-47E4-9FCA-8A58FB25B805}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{7B288026-5502-4A39-BF41-77E086F3E4A3}.Testing|Any CPU.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,55 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:ImageButton runat="server" ImageUrl="Images/login-but.gif" width="56" height="20" border="0" SkinID="loginbtn"/>
+<asp:ImageButton runat="server" ImageUrl="Images/rates-but.png" width="56" height="20" border="0" SkinID="Ratesbtn"/>
+<asp:ImageButton runat="server" ImageUrl="Images/ship-but.png" width="56" height="20" border="0" SkinID="Shipbtn"/>
+
+<asp:DropDownList  runat=server CssClass="formfields" style="width:184px; height:18px;"   SkinID="COADropDownList"></asp:DropDownList>
+<asp:TextBox runat="server" style="width: 197px; height: 16px;" SkinID="LoginTextBox"/>
+
+<asp:Gridview runat="server" AutoGenerateColumns="false" GridLines="None" width="100%" SkinID="dshbrdRgtPnlGrd">
+    <headerstyle BackColor="#d7e0f1"  Width="100%"  HorizontalAlign="Left" />
+    <rowstyle HorizontalAlign="Left" Height="15px"/>
+</asp:Gridview>
+
+<asp:Gridview SkinID="dshbrdCntPnlGrd" runat="server" AutoGenerateColumns="false" GridLines="None" Width="100%">
+    <headerstyle BackColor="#d7e0f1" HorizontalAlign="Left"/>
+    <rowstyle HorizontalAlign="Left" Height="18px" />
+</asp:Gridview>
+
+<asp:Gridview SkinID="dshbrdPopUpControl" runat="server" AutoGenerateColumns="false" GridLines="None" Width="100%">
+    <headerstyle BackColor="#d7e0f1" HorizontalAlign="Left" Height="18px"/>
+    <rowstyle HorizontalAlign="Left" Height="18px" />
+</asp:Gridview>
+
+<asp:Label SkinID="Label" runat="server" CssClass="mbodyb" />
+<asp:Label SkinID="LabelMsg" runat="server" CssClass="msummary" />
+<asp:Label SkinID="LabelBranch" runat="server" CssClass="mbodybbranch" />
+<asp:Label SkinID="LabelBig" runat="server" CssClass="mlabelbig" />
+<asp:Label SkinID="LabelLarger" runat="server" CssClass="mlabelLarger" />
+
+
+<asp:Gridview SkinID="BranchGVStyle" runat="server" AutoGenerateColumns="false" GridLines="None">
+    <HeaderStyle CssClass="GridViewChildHeader"  HorizontalAlign="Center" />
+    <RowStyle HorizontalAlign="Center" Height="18px"/>
+</asp:Gridview>
+
+<asp:Gridview SkinID="EditableGVStyle" runat="server" AutoGenerateColumns="false" GridLines="None">
+    <headerstyle  HorizontalAlign="Center" Height="18px"/>
+    <rowstyle HorizontalAlign="Left" Height="18px" />
+</asp:Gridview>
+

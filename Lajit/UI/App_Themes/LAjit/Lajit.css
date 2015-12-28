@@ -1,0 +1,62 @@
+﻿
+.msummary
+{
+	font-family: bold;
+	font-size: 11px;
+	color: #ff0000;
+	font-family: verdana, Arial, helvetica, univers;
+}
+.mbodybbranch
+{
+	font-weight: normal;
+	color: #003366;
+	font-size: 11px;
+	font-family: Verdana, Arial, Tahoma,helvetica, univers;
+}
+
+.mbodyb
+{
+	font-weight: bold; /*font-weight: normal;*/
+	color: #003366;
+	font-size: 11px;
+	font-family: Verdana, Arial, Tahoma, verdana, arial, helvetica, univers;
+}
+
+.mbodybig
+{
+	font-weight: bold; /*font-weight: normal;*/
+	color: #003366;
+	font-size: 17px;
+	font-family: Verdana, Arial, Tahoma, verdana, arial, helvetica, univers;
+	background-color: Transparent;
+}
+
+.mlabelbig
+{
+	font-weight: bold; /*font-weight: normal;*/
+	color: #003366;
+	font-size: 12px;
+	font-family: Verdana, Arial, Tahoma, verdana, arial, helvetica, univers;
+	background-color: Transparent;
+}
+
+.mlabelLarger
+{
+	font-weight: bold; /*font-weight: normal;*/
+	color: #003366;
+	font-size: 15px;
+	font-family: Verdana, Arial, Tahoma, verdana, arial, helvetica, univers;
+	background-color: Transparent;
+}
+
+.GridViewChildHeader
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #85a0d3;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+}

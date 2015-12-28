@@ -1,0 +1,44 @@
+<Chart Palette="Dundas" BuildNumber="4.5.0.1681" BackColor="WhiteSmoke" BackGradientType="TopBottom" BackGradientEndColor="White" BorderLineColor="26, 59, 105" BorderLineWidth="2" BorderLineStyle="Solid">
+  <Series>
+    <Series _Template_="0" Color="220, 65, 140, 240" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="1" Color="220, 252, 180, 65" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="2" Color="220, 224, 64, 10" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="3" Color="220, 5, 100, 146" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="4" Color="220, 191, 191, 191" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="5" Color="220, 26, 59, 105" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="6" Color="220, 255, 227, 130" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="7" Color="220, 18, 156, 221" BorderColor="180, 26, 59, 105">
+    </Series>
+    <Series _Template_="8" Color="220, 202, 107, 75" BorderColor="180, 26, 59, 105">
+    </Series>
+  </Series>
+  <ChartAreas>
+    <ChartArea _Template_="All" BackColor="WhiteSmoke" BackGradientEndColor="White" ShadowColor="Transparent" BorderColor="64, 64, 64, 64" BorderStyle="Solid">
+      <AxisY LineColor="64, 64, 64, 64">
+        <MajorGrid LineColor="64, 64, 64, 64" />
+        <LabelStyle Font="Trebuchet MS, 8.25pt, style=Bold" />
+      </AxisY>
+      <AxisX LineColor="64, 64, 64, 64">
+        <MajorGrid LineColor="64, 64, 64, 64" />
+        <LabelStyle Font="Trebuchet MS, 8.25pt, style=Bold" />
+      </AxisX>
+      <Area3DStyle RightAngleAxes="False" Clustered="True" Perspective="10" XAngle="15" YAngle="10" WallWidth="0" PointGapDepth="0" />
+    </ChartArea>
+  </ChartAreas>
+  <Legends>
+    <Legend _Template_="All" BackColor="Transparent" Font="Trebuchet MS, 8.25pt, style=Bold">
+    </Legend>
+  </Legends>
+  <Titles>
+    <Title _Template_="All" Font="Trebuchet MS, 14.25pt, style=Bold" Color="26, 59, 105" ShadowOffset="3" ShadowColor="32, 0, 0, 0">
+    </Title>
+  </Titles>
+  <BorderSkin PageColor="White" SkinStyle="Emboss" />
+</Chart>

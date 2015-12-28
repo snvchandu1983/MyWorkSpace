@@ -1,0 +1,25 @@
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\obj\Debug\ResolveAssemblyReference.cache
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjitDev.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjitDev.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\Ajax.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\AjaxControlToolkit.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\DocX.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\DundasWebChart.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\ExcelPackage.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\FredCK.FCKeditorV2.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\Gios Pdf.NET.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\ICSharpCode.SharpZipLib.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\ITextsharp.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjitControls.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjit_BO.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\WebChart.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjit_DAL.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjit_BO.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\ExcelPackage.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\Gios Pdf.NET.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjitControls.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\LAjit_DAL.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\obj\Debug\LAjitDev.csproj.ResolveComReference.cache
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\obj\Debug\LAjitDev.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\obj\Debug\LAjitDev.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\UI\bin\NLog.dll

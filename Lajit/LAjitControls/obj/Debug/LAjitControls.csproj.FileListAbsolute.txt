@@ -1,0 +1,5 @@
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\LAjitControls\bin\Debug\LAjitControls.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\LAjitControls\bin\Debug\LAjitControls.pdb
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\LAjitControls\obj\Debug\ResolveAssemblyReference.cache
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\LAjitControls\obj\Debug\LAjitControls.dll
+C:\sparadesiTFS\LAJITWEBAPPLICATION\Main\Source\LAjitControls\obj\Debug\LAjitControls.pdb
